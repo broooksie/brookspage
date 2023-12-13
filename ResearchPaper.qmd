@@ -1,0 +1,71 @@
+[\<- Back home](https://2587c421b98b42f1af29227fc18e9422.app.posit.cloud/p/4c0edd32/)
+
+**Relationship Between LGBT+ Identity and One's Healthcare Access and Attitudes By: Brooks Rupar**
+
+**Research Question:** Do people that fall under the LGBT+ spectrum still feel as though they are treated with less respect by doctors, and have a harder time finding a stable provider?
+
+From archaic views of the dangers of homosexual sex (i.e: the Red Cross's policy on gay men donating blood while sexually active), to trans people often being treated and talked to as their assigned sex at birth, I believe through anecdotal experience that LGBT+ individuals are more likely to be treated with contempt while trying to find healthcare. Common knowledge seems to lead one to assuming that LGBT+ treatment and attitudes has gotten better as we've marched onwards into the modern age. Plenty of previous research, done in years prior, references disparities and overall maltreatment of LGBT+ people in healthcare settings. While that research is beneficial, and absolutely should still be looked to, I failed to find research done using data collected within the past few years. I want to see, using a large dataset, how experiences within healthcare differ between these two groups today, to possibly see if LGBT+ care has improved.
+
+**Hypothesis**
+
+I believe from both anecdotal and academic experience that LGBT+ people are still (and often) discriminated against within the healthcare system. There is room for error in my hypothesis, as many groups within the LGBT+ community are reliant on healthcare, i.e: transgender people needing to go through the healthcare system if they want to medically transition, so more providers may be comfortable treating LGBT+ people in the way LGBT+ people want.
+
+**Description of Data**
+
+Name: Health Reform Monitoring Survey, United States, First Quarter 2020 Source: The study was primarily investigated by The Urban Institute, distributed by the Inter-university Consortium for Political and Social Research, and was later uploaded by ICPSR. Description: "In January 2013, the Urban Institute launched the Health Reform Monitoring Survey (HRMS), a survey of the nonelderly population, to explore the value of cutting-edge, Internet-based survey methods to monitor the Affordable Care Act (ACA) before data from federal government surveys are available. Topics covered by the 19th round of the survey (first quarter 2020) include self-reported health status, health insurance coverage, access to health care, trust in the health care system, use of public benefits, material hardship, and the COVID-19 pandemic. Additional information collected by the survey includes age, gender, sexual orientation, marital status, education, race and ethnicity, United States citizenship, housing type, home ownership, internet access, income, and employment status." The data, while primarily monitoring the ACA, also includes individuals covered by private insurance. There were 9,032 participants in the study that were selected via a stratified random sample of adults ages 18-64 drawn from the Knowledge Panel, a probability-based, nationally representative Internet panel maintained by Ipsos. Limitations: While the sample size as a whole is relatively large, the sample size of the LGBT+ population is comparatively small (n = 658). The data is weighted, and I factor those weights into my visualizations, so this shouldn't be a problem. Also, the survey only provides two options for gender, which limits the range of freedom queer people have when responding to the survey.
+
+**Operationalizing**
+
+To answer my research question, I chose three main questions to analyze.
+
+\[Q1\] In general, would you say your health is... (5 point Likert scale)
+
+I chose this question to get a baseline view of whether or not LGBT+ people may or may not need to see a doctor more, and factors into the necessity of the answer of my research question.
+
+\[Q4\] Is there a place that you usually go to when you are sick or need advice about your health? (3 point scale)
+
+This question was chosen to see if LGBT+ people felt as though they had a stable place to go to. While impossible to know from this dataset, it could be cause that they don't have a place due to their response to the following question
+
+\[TQ57T_1\] I am treated with courtesy and respect by most doctors. (5 point Likert scale) This is the meat of my research question.
+
+This question gives respondents the ability to analyze how they've been treated by doctors throughout their life (i.e: generally rather than just the one they're seeing currently).
+
+The other two questions I kept from the study were \[WEIGHT1_NEW\] Post Stratification weights - adult, post-Jan. 2017 re-weighting Weights, used to make the graphs as accurate and reproducible as possible. \[LGBT_NEW\]: Gay or lesbian, bisexual, or transgender (updated demographic profile questions) Two responses (Y/N), used to split the sample into two distinct groups, those that identify as LGBT+ and those that do not.
+
+I split the respondents up by LGBT+ demographic and created proportions to accurately analyze the group's feelings towards each question. I also removed individuals that refused to answer questions, as well as NA entries. I think the weakest part of these visualizations is scope. While I answer my research question, there are also other things to consider when measuring feelings of respect in healthcare, and the questions I chose don't directly make participants reference respect in regard to their identity. Following that, the LGBT+ community is incredibly diverse, and individuals within the community present in a variety of ways, which may factor into how medical professionals treat them. While all are not within the scope of this paper, they are worth exploring in further research.
+
+**Data Exploration**
+
+![](Table%201.png){fig-align="center"}
+
+![](Table%202.png){fig-align="center"}
+
+The above tables show the difference in mean, median, standard deviation, and coefficient of variance for both demographics we're measuring. There is an overall lower mean for TQ57T_1, showing that LGBT+ individuals feel less respected overall, have worse feelings about their health, and have less stability in their provider. These differences are not as large as I expected in my hypothesis. Standard deviations are a bit higher among the LGBT population, but that is explained by the smaller sample size as a whole. No outliers were removed, as the questions were done with a Likert Scale, non-responses and refusals were removed
+
+**Data Visualization**
+
+**Fig. A**
+
+![](Fig%20A.png){fig-align="center"}
+
+While not central to my research question, I thought it'd be useful to establish a baseline of how much LGBT+ vs. straight and cis people go to the doctor. From the graphs, we see that approximately 4.5% more straight and cis people feel their health is 'excellent' or 'very good', where as 4.5% more LGBT+ people view their health as 'good' or 'fair.' There are more LGBT+ people that define their health as poor, but not by as much of a margin as the others. This means that LGBT+ people generally may be seeing doctors more, or need to see doctors more.
+
+**Fig B.**
+
+![](Fig%20B.png)
+
+Similar to the above graph, this question sees a small but noticeable about of LGBT+ people responding that they do not have a settled provider that they can go to (2.9%). While there are other variables that may cause someone to not have a set provider, with all other factors the same between the two groups aside from gender and sexuality, it can be concluded that LGBT+ people may have a harder time finding a doctor that they like that respects, and therefore they don't immediately have someone they can trust to go to.
+
+**Fig. C**
+
+![](Fig%20C.png)
+
+Contrasting the previous graph, we can the biggest difference between the two groups in their response to the question, "Are you treated with respect by doctors?" In the 'always' response, there is a 7.2% difference between the two groups, meaning LGBT+ people are more prone to being treated disrespectfully due to their identity. The other biggest contrast is in the 'sometimes' category, with a 4.6% difference. It's interesting that the 'often category' is virtually the same, but this ended up aligning with my hypothesis, albeit not to the extent that I expected
+
+**Conclusion**
+
+Despite the recency of this study, it's apparent that LGBT+ individuals do have a harder time finding comfort, respect, and stability in healthcare compared to their straight and cis peers. This difference however, is not as stark as I expected. As seen in Fig. C LGBT+ people are more likely to be disrespected, but the individuals who never feel respected are of approximately equal proportion within each group. Some further questions that arise from my data that could be investigated are: whether LGBT+ people feel generally worse because they don't have access to a provider, or a provider that respects them; or how different subgroups within the LGBT+ community vary within their feelings of respect. LGBT+ people most likely still feel disrespected by medical professionals because the education of those professionals is still overwhelming through a cisgender and heterosexual lens. There is no apparent harm to exposing all healthcare professionals to LGBT+ issues, and not delegating that education to just professionals that specialize in LGBT+ issues, as those are not the only doctors that care for LGBT+ patients.
+
+**Bibliography**
+
+Bonvicini, K. A. (2017). LGBT healthcare disparities: What progress have we made? Patient Education and Counseling, 100(12), 2357--2361. <https://doi.org/10.1016/j.pec.2017.06.003> Hibbert, M., Wolton, A., et. Al (2018). Experiences of stigma and discrimination in social and healthcare settings among trans people living with HIV in the UK. AIDS Care, 30(7), 836--843. <https://doi.org/10.1080/> 09540121.2018.1436687 Holahan, John, and Karpman, Michael. Health Reform Monitoring Survey, United States, First Quarter 2020. Inter-university Consortium for Political and Social Research \[distributor\], 2022-02-10. <https://doi.> org/10.3886/ICPSR38110.v1 Konnelly, L. (2021). Both, and: Transmedicalism and resistance in non-binary narratives of gender-affirming care. Toronto Working Papers in Linguistics, 43(1). <https://doi.org/10.33137/twpl.v43i1.35968>

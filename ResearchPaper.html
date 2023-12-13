@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>researchpaper</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="ResearchPaper_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ResearchPaper_files/libs/quarto-html/quarto.js"></script>
+<script src="ResearchPaper_files/libs/quarto-html/popper.min.js"></script>
+<script src="ResearchPaper_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ResearchPaper_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ResearchPaper_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ResearchPaper_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ResearchPaper_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ResearchPaper_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ResearchPaper_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<p><a href="https://2587c421b98b42f1af29227fc18e9422.app.posit.cloud/p/4c0edd32/">&lt;- Back home</a></p>
+<p><strong>Relationship Between LGBT+ Identity and One’s Healthcare Access and Attitudes By: Brooks Rupar</strong></p>
+<p><strong>Research Question:</strong> Do people that fall under the LGBT+ spectrum still feel as though they are treated with less respect by doctors, and have a harder time finding a stable provider?</p>
+<p>From archaic views of the dangers of homosexual sex (i.e: the Red Cross’s policy on gay men donating blood while sexually active), to trans people often being treated and talked to as their assigned sex at birth, I believe through anecdotal experience that LGBT+ individuals are more likely to be treated with contempt while trying to find healthcare. Common knowledge seems to lead one to assuming that LGBT+ treatment and attitudes has gotten better as we’ve marched onwards into the modern age. Plenty of previous research, done in years prior, references disparities and overall maltreatment of LGBT+ people in healthcare settings. While that research is beneficial, and absolutely should still be looked to, I failed to find research done using data collected within the past few years. I want to see, using a large dataset, how experiences within healthcare differ between these two groups today, to possibly see if LGBT+ care has improved.</p>
+<p><strong>Hypothesis</strong></p>
+<p>I believe from both anecdotal and academic experience that LGBT+ people are still (and often) discriminated against within the healthcare system. There is room for error in my hypothesis, as many groups within the LGBT+ community are reliant on healthcare, i.e: transgender people needing to go through the healthcare system if they want to medically transition, so more providers may be comfortable treating LGBT+ people in the way LGBT+ people want.</p>
+<p><strong>Description of Data</strong></p>
+<p>Name: Health Reform Monitoring Survey, United States, First Quarter 2020 Source: The study was primarily investigated by The Urban Institute, distributed by the Inter-university Consortium for Political and Social Research, and was later uploaded by ICPSR. Description: “In January 2013, the Urban Institute launched the Health Reform Monitoring Survey (HRMS), a survey of the nonelderly population, to explore the value of cutting-edge, Internet-based survey methods to monitor the Affordable Care Act (ACA) before data from federal government surveys are available. Topics covered by the 19th round of the survey (first quarter 2020) include self-reported health status, health insurance coverage, access to health care, trust in the health care system, use of public benefits, material hardship, and the COVID-19 pandemic. Additional information collected by the survey includes age, gender, sexual orientation, marital status, education, race and ethnicity, United States citizenship, housing type, home ownership, internet access, income, and employment status.” The data, while primarily monitoring the ACA, also includes individuals covered by private insurance. There were 9,032 participants in the study that were selected via a stratified random sample of adults ages 18-64 drawn from the Knowledge Panel, a probability-based, nationally representative Internet panel maintained by Ipsos. Limitations: While the sample size as a whole is relatively large, the sample size of the LGBT+ population is comparatively small (n = 658). The data is weighted, and I factor those weights into my visualizations, so this shouldn’t be a problem. Also, the survey only provides two options for gender, which limits the range of freedom queer people have when responding to the survey.</p>
+<p><strong>Operationalizing</strong></p>
+<p>To answer my research question, I chose three main questions to analyze.</p>
+<p>[Q1] In general, would you say your health is… (5 point Likert scale)</p>
+<p>I chose this question to get a baseline view of whether or not LGBT+ people may or may not need to see a doctor more, and factors into the necessity of the answer of my research question.</p>
+<p>[Q4] Is there a place that you usually go to when you are sick or need advice about your health? (3 point scale)</p>
+<p>This question was chosen to see if LGBT+ people felt as though they had a stable place to go to. While impossible to know from this dataset, it could be cause that they don’t have a place due to their response to the following question</p>
+<p>[TQ57T_1] I am treated with courtesy and respect by most doctors. (5 point Likert scale) This is the meat of my research question.</p>
+<p>This question gives respondents the ability to analyze how they’ve been treated by doctors throughout their life (i.e: generally rather than just the one they’re seeing currently).</p>
+<p>The other two questions I kept from the study were [WEIGHT1_NEW] Post Stratification weights - adult, post-Jan.&nbsp;2017 re-weighting Weights, used to make the graphs as accurate and reproducible as possible. [LGBT_NEW]: Gay or lesbian, bisexual, or transgender (updated demographic profile questions) Two responses (Y/N), used to split the sample into two distinct groups, those that identify as LGBT+ and those that do not.</p>
+<p>I split the respondents up by LGBT+ demographic and created proportions to accurately analyze the group’s feelings towards each question. I also removed individuals that refused to answer questions, as well as NA entries. I think the weakest part of these visualizations is scope. While I answer my research question, there are also other things to consider when measuring feelings of respect in healthcare, and the questions I chose don’t directly make participants reference respect in regard to their identity. Following that, the LGBT+ community is incredibly diverse, and individuals within the community present in a variety of ways, which may factor into how medical professionals treat them. While all are not within the scope of this paper, they are worth exploring in further research.</p>
+<p><strong>Data Exploration</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Table%201.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Table%202.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The above tables show the difference in mean, median, standard deviation, and coefficient of variance for both demographics we’re measuring. There is an overall lower mean for TQ57T_1, showing that LGBT+ individuals feel less respected overall, have worse feelings about their health, and have less stability in their provider. These differences are not as large as I expected in my hypothesis. Standard deviations are a bit higher among the LGBT population, but that is explained by the smaller sample size as a whole. No outliers were removed, as the questions were done with a Likert Scale, non-responses and refusals were removed</p>
+<p><strong>Data Visualization</strong></p>
+<p><strong>Fig. A</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Fig%20A.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>While not central to my research question, I thought it’d be useful to establish a baseline of how much LGBT+ vs.&nbsp;straight and cis people go to the doctor. From the graphs, we see that approximately 4.5% more straight and cis people feel their health is ‘excellent’ or ‘very good’, where as 4.5% more LGBT+ people view their health as ‘good’ or ‘fair.’ There are more LGBT+ people that define their health as poor, but not by as much of a margin as the others. This means that LGBT+ people generally may be seeing doctors more, or need to see doctors more.</p>
+<p><strong>Fig B.</strong></p>
+<p><img src="Fig%20B.png" class="img-fluid"></p>
+<p>Similar to the above graph, this question sees a small but noticeable about of LGBT+ people responding that they do not have a settled provider that they can go to (2.9%). While there are other variables that may cause someone to not have a set provider, with all other factors the same between the two groups aside from gender and sexuality, it can be concluded that LGBT+ people may have a harder time finding a doctor that they like that respects, and therefore they don’t immediately have someone they can trust to go to.</p>
+<p><strong>Fig. C</strong></p>
+<p><img src="Fig%20C.png" class="img-fluid"></p>
+<p>Contrasting the previous graph, we can the biggest difference between the two groups in their response to the question, “Are you treated with respect by doctors?” In the ‘always’ response, there is a 7.2% difference between the two groups, meaning LGBT+ people are more prone to being treated disrespectfully due to their identity. The other biggest contrast is in the ‘sometimes’ category, with a 4.6% difference. It’s interesting that the ‘often category’ is virtually the same, but this ended up aligning with my hypothesis, albeit not to the extent that I expected</p>
+<p><strong>Conclusion</strong></p>
+<p>Despite the recency of this study, it’s apparent that LGBT+ individuals do have a harder time finding comfort, respect, and stability in healthcare compared to their straight and cis peers. This difference however, is not as stark as I expected. As seen in Fig. C LGBT+ people are more likely to be disrespected, but the individuals who never feel respected are of approximately equal proportion within each group. Some further questions that arise from my data that could be investigated are: whether LGBT+ people feel generally worse because they don’t have access to a provider, or a provider that respects them; or how different subgroups within the LGBT+ community vary within their feelings of respect. LGBT+ people most likely still feel disrespected by medical professionals because the education of those professionals is still overwhelming through a cisgender and heterosexual lens. There is no apparent harm to exposing all healthcare professionals to LGBT+ issues, and not delegating that education to just professionals that specialize in LGBT+ issues, as those are not the only doctors that care for LGBT+ patients.</p>
+<p><strong>Bibliography</strong></p>
+<p>Bonvicini, K. A. (2017). LGBT healthcare disparities: What progress have we made? Patient Education and Counseling, 100(12), 2357–2361. <a href="https://doi.org/10.1016/j.pec.2017.06.003" class="uri">https://doi.org/10.1016/j.pec.2017.06.003</a> Hibbert, M., Wolton, A., et. Al (2018). Experiences of stigma and discrimination in social and healthcare settings among trans people living with HIV in the UK. AIDS Care, 30(7), 836–843. <a href="https://doi.org/10.1080/" class="uri">https://doi.org/10.1080/</a> 09540121.2018.1436687 Holahan, John, and Karpman, Michael. Health Reform Monitoring Survey, United States, First Quarter 2020. Inter-university Consortium for Political and Social Research [distributor], 2022-02-10. <a href="https://doi." class="uri">https://doi.</a> org/10.3886/ICPSR38110.v1 Konnelly, L. (2021). Both, and: Transmedicalism and resistance in non-binary narratives of gender-affirming care. Toronto Working Papers in Linguistics, 43(1). <a href="https://doi.org/10.33137/twpl.v43i1.35968" class="uri">https://doi.org/10.33137/twpl.v43i1.35968</a></p>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

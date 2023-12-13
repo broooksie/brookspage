@@ -1,0 +1,132 @@
+[\<- Back Home](https://2587c421b98b42f1af29227fc18e9422.app.posit.cloud/p/4c0edd32/)
+
+**Research Question** What Oregon counties have the highest median income, but lowest high-school graduation rate?
+
+Setup / Package loading
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Turn off scientific notation
+options(scipen=999)
+
+# Load the tidyverse.
+library(tidyverse)
+library(tidycensus)
+library(leaflet.extras2)
+library(glue)
+library(mapview)
+library(tmap)
+```
+
+Adding my API Key
+
+```{r echo=FALSE}
+
+myapikey <- "2a6f8c21a30d3024e038d67d7d4eba647dc79cd4"
+
+census_api_key(myapikey, overwrite=TRUE, install = TRUE)
+
+readRenviron("~/.Renviron")
+
+```
+
+Loading and setting variables
+
+```{r}
+
+Five_Year_ACS <- load_variables(2022, "acs5", cache = TRUE)
+
+medincome <- "B19001_001E"
+hsgrad <- "B15003_017E"
+totalpop <- "B01003_001E"
+
+myvars <- c(
+  totalpop = "B01003_001E",
+  medincome = "B19001_001E",
+  hsgrad = "B15003_017E")
+  
+```
+
+Creating tables and wrangling data
+
+```{r}
+
+MedianIncomeOregon <- 
+  get_acs(geography = "county", 
+          variables = medincome,
+          state = "OR")
+MedEdit <-
+  rename(MedianIncomeOregon, income = estimate)
+MedEdit <-
+subset(MedEdit, select = -c(variable, moe) )
+
+HighSchoolGradOregon <- 
+  get_acs(geography = "county", 
+          variables = hsgrad,
+          state = "OR")
+HSGradEdit <-
+  rename(HighSchoolGradOregon, graduated = estimate)
+```
+
+Table if you'd like to see raw data without the map
+
+```{r}
+HSGradEdit <-
+subset(HSGradEdit, select = -c(variable, moe) )
+CombinedTable <-
+  full_join(MedEdit, HSGradEdit)
+
+```
+
+Creating interactive map
+
+```{r}
+or_counties_withgeo <-
+  get_acs(geography = "county",
+          variables = c(myvars),
+          state = "OR",
+          output = "wide",
+          geometry = TRUE)
+
+map_income <- mapview(or_counties_withgeo, zcol = "medincome",col.regions  = RColorBrewer::brewer.pal(9, "Greens"),
+        alpha.regions= 1)
+map_hsgrad <- mapview(or_counties_withgeo, zcol = "hsgrad", col.regions  = RColorBrewer::brewer.pal(9, "Greens"),
+        alpha.regions= 1)
+map_totalpop <- mapview(or_counties_withgeo, zcol = "totalpop", col.regions  = RColorBrewer::brewer.pal(9, "Greens"),
+        alpha.regions= 1)
+
+
+```
+
+Customizing labels and popups, adding percentage equation for HS Graduation Rate
+
+```{r}
+hsgrad_numeric <- as.numeric(or_counties_withgeo$hsgrad)
+totalpop_numeric <- as.numeric(or_counties_withgeo$totalpop)
+
+labels <- glue::glue("{or_counties_withgeo$NAM} Median Income of {or_counties_withgeo$medincome}, High School Graduation Rate of {(100-((hsgrad_numeric/totalpop_numeric)*100))}%")
+
+
+mypopup <- glue::glue("<strong>{or_counties_withgeo$NAM}</strong><br />
+                      High School Graduation: {or_counties_withgeo$hsgrad}<br />
+                      Median Income: {or_counties_withgeo$medincome}") %>% 
+  lapply(htmltools::HTML)
+```
+
+Final map \^\_\^
+
+```{r}
+mapview(or_counties_withgeo, zcol = "medincome", 
+         col.regions = RColorBrewer::brewer.pal(9, "Greens"), 
+         alpha.regions = 1,
+         label = labels,
+        popup = mypopup)
+
+
+
+```
+
+**Answer:** Clackamas and Marion County both have fairly above average median incomes (\>\$100K), but very average high school graduation rates (87%). For reference Jefferson county has a median income of approximately \$8K, but has a high school graduation rate of 85%
+
+Thanks for reading!
