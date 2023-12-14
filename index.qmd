@@ -12,7 +12,7 @@ editor: visual
 
 You can find my resume, which has more about my experience [here](https://2587c421b98b42f1af29227fc18e9422.app.posit.cloud/file_show?path=%2Fcloud%2Fproject%2FResumeFALL2023.pdf)
 
-If you'd like to read my paper titled "Relationship Between LGBT+ Identity and One's Healthcare Access and Attitudes" which I analyzed data using R Tidyverse, [click here](broooksie.github.io/researchpaper.html)
+If you'd like to read my paper titled "Relationship Between LGBT+ Identity and One's Healthcare Access and Attitudes" which I analyzed data using R Tidyverse, [click here](broooksie.github.io/ResearchPaper.html)
 
 I write too! I wrote frequently for Student's Against Imperialism's Monthly Newsletter, which I also created the design for! Read and issue by [clicking here](https://drive.google.com/file/d/1qSsinrTlm7ae1QY8iqQYlufDF2OZYYwa/view) if you want the plaintext,[click here](broooksie.github.io/Article.html)
 
