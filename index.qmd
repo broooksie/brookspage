@@ -14,9 +14,9 @@ You can find my resume, which has more about my experience [here](https://2587c4
 
 If you'd like to read my paper titled "Relationship Between LGBT+ Identity and One's Healthcare Access and Attitudes" which I analyzed data using R Tidyverse, [click here](ResearchPaper.html)
 
-I write too! I wrote frequently for Student's Against Imperialism's Monthly Newsletter, which I also created the design for! Read and issue by [clicking here](https://drive.google.com/file/d/1qSsinrTlm7ae1QY8iqQYlufDF2OZYYwa/view) if you want the plaintext,[click here](broooksie.github.io/mywebsite/Article.html)
+I write too! I wrote frequently for Student's Against Imperialism's Monthly Newsletter, which I also created the design for! Read and issue by [clicking here](https://drive.google.com/file/d/1qSsinrTlm7ae1QY8iqQYlufDF2OZYYwa/view) if you want the plaintext,[click here](Article.html)
 
-If you'd like to see an analysis of which Oregon counties have the highest median income, but lowest high school graduation rate [click here](broooksie.github.io/mywebsite/TidyCensus.html)
+If you'd like to see an analysis of which Oregon counties have the highest median income, but lowest high school graduation rate [click here](TidyCensus.html)
 
 Contact me at brooks.rupar\@gmail.com, see my github [here,](https://github.com/broooksie) or check out my portfolio [here](https://portfolio.adobe.com/59afd969-811a-4784-ac41-985bca2088d0/editor/)
 
