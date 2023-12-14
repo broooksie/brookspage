@@ -1,4 +1,4 @@
-[\<- Back Home](broooksie.github.io)
+[\<- Back Home](broooksie.github.io/mywebsite)
 
 **Research Question:** What Oregon counties have the highest median income, but lowest high-school graduation rate?
 
